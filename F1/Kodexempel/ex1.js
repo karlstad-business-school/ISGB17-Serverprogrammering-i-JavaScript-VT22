@@ -1,0 +1,3 @@
+'use strict';
+
+//Första programmet
