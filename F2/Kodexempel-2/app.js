@@ -6,6 +6,8 @@ replace().then(function(returvarde) {
     console.log('Alles gut!');
 });
 
+console.log('kör på utan blockering...');
+
 
 
 
@@ -19,7 +21,7 @@ async function replace() {
 
         for(let j=0; j<megaFil.length;j++) {
             if(megaFil[j]=='a') {
-                megaFil[j]='y';
+                //megaFil[j]='y';
             }
         }
     }
