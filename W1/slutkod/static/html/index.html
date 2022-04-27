@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Min html-sida</title>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Observera att här pekas stilmall.css ut! -->
+        <link href="public/style/stilmall.css" rel="stylesheet" />
+    </head>
+
+    <body class="container p-2">
+
+        <main class="jumbotron text-center mb-5 pb-4">
+
+            <!-- Observera att här pekas uil.svg ut! -->
+            <img src="public/image/uil.svg" alt="Fågel" />
+            
+            <h1 class="display-3">Skriv ditt nickname</h1>
+
+            <!-- Observera att enctype-attributet är ett krav! -->
+            <form method="POST" action="/" class="text-left" enctype="application/x-www-form-urlencoded">
+            
+
+                <div class="form-group">
+                    <label for="nickname">Nickname:</label>
+                    <input type="text" class="form-control" id="nickname" name="nickname" value="Fågelspecialisten">
+                </div>
+                
+                <div class="form-group">
+                    <label for="antal">Antal:</label>
+                    <input type="range" class="form-control" id="antal" name="antal" min="1" max="100" value="42">
+                </div>
+
+                <div class="text-right">
+                    <a href="/" class="btn btn-warning">Tillbaka</a>
+                    <button type="submit" class="btn btn-primary mr-0">Skicka inlägg</button>                  
+                </div>
+
+            </form>
+
+        </main>
+
+    </body>
+  
+</html>
