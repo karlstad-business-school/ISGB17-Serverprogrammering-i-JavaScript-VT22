@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Min html-sida</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Observera att här pekas stilmall.css ut! -->
+        <link href="public/style/stilmall.css" rel="stylesheet" />
+    </head>
+
+    <body class="container p-2">
+
+        <main class="jumbotron text-center mb-5 pb-4">
+
+            <!-- Observera att här pekas uil.svg ut! -->
+            <img src="public/image/uil.svg" alt="uil.svg" />
+            
+            <h1 class="display-3">Ange bakgrunds- och och textfärg</h1>
+
+            <!-- Observera att enctype-attributet är ett krav! -->
+            <form method="post" class="text-left" enctype="application/x-www-form-urlencoded">
+
+                <div class="form-group">
+                    <label for="backgroundcolor">Backgroundcolor:</label>
+                    <input type="color" class="form-control" id="backgroundcolor" name="bgcolor">
+                </div>
+
+                <div class="form-group">
+                    <label for="textcolor">Textcolor:</label>
+                    <input type="color" class="form-control" id="textcolor" name="fgcolor">
+                </div>
+                
+                <div class="text-right">
+                    <a href="/" class="btn btn-warning">Tillbaka</a>
+                    <button type="submit" class="btn btn-primary mr-0">Skicka färgdata</button>                  
+                </div>
+
+            </form>
+
+        </main>
+
+        <script src="public/script/clientscript.js"></script>
+    </body>
+  
+</html>
