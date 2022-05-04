@@ -9,14 +9,20 @@
 //npm install express
 //npm install jsdom
 
+//Ett mer omfattande exempel med lösningar för utmaningarna nedan hittar ni i cookieappsolution.js
+
 const express = require( 'express' );
 const jsDOM = require( 'jsdom' );
 const fs = require( 'fs' );
+
+const cookieParser = require('cookie-parser');
 
 let app = express(); 
 
 app.use( '/public', express.static( __dirname + '/static' ) );
 app.use( express.urlencoded( { extended: true } ) );
+
+app.use(cookieParser());
 
 app.listen( 81, function() {
     console.log( 'Server is running on port 81!' );
@@ -38,7 +44,14 @@ app.get( '/', function(request, response) {
 });
 
 app.get( '/merHamsterCom.html', function( request, response ) {
+
+    /*
+        Här får ni i uppgift att kontrllera om kakorna finns och om så är fallet läsa upp innehållet i
+        merHamsterCom.html till en virtuell DOM och ändra bakgrundsfärg och förgrundsfärg enligt
+        kakornas innehåll och avslutningsvis skicka tillbaka innehållet i den ändrade virtuella DOM:en
+    */
 	
+    console.log( request.cookies,  request.cookies.fgcolor, request.cookies.bgcolor);
     console.log( request.query );
     fs.readFile( __dirname + '/static/html/merHamsterCom.html', function( error, data ) {
 
@@ -78,6 +91,17 @@ app.get( '/favicon.ico', function( request, response ) {
 app.post( '/', function(request, response) {
 
     console.log( request.body );
+
+    //Här får ni i uppgift att kontrollera om kakorna finns eller inte. Finns kakorna gör redirekt
+    //som nedan. Finns inte kakorna kontrollera att inkommande värden från formuläret 
+    //inte har värdet '#ffffff' eller '#000000'. Om så är fallet exekvera koden med response.sendFile() 
+    //nedan är kakorn. Innehåller inkommande värden korrekt data skapa kakorna och gör redirekt enligt nedan- 
+    response.cookie('bgcolor', request.body.bgcolor);
+    response.cookie('fgcolor', request.body.fgcolor);
+    response.redirect('/merHamsterCom.html');
+
+    /*
+
     response.sendFile( __dirname + '/static/html/merHamsterCom.html', function( error ) {
         if( error ) {
             response.status( 500 ).send( '500 Server error' );
@@ -86,6 +110,7 @@ app.post( '/', function(request, response) {
         }
     });
      
+    */
 });
 
 app.use( function( request, response ) {
