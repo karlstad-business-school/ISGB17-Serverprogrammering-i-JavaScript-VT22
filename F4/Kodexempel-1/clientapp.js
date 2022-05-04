@@ -12,3 +12,23 @@
   Avsluta request
 
 */
+
+const http = require('http');
+
+const options = {
+  hostname : 'localhost',
+  port : 81,
+  path : '/',
+  method : 'GET'
+};
+
+const request = http.request( options, function( response ) {
+
+  response.on( 'data', function( data) {
+      console.log( data.toString() );
+  });
+
+});
+
+request.end();
+
