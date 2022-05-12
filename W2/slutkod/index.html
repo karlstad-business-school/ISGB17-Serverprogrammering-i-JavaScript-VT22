@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <title>Kodexempel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body class="container">
+        <header class="jumbotron text-center mt-3" style="background: linear-gradient(to bottom, rgba(111, 190, 255, 0.9) 0%,rgba(125,185,232,0) 100%);">
+            <!-- bild hämtad från freesvg.org-->
+            <image src="public/images/uil.svg" alt="logo" width="100">
+            <h1 class="display-4">Välkommen till Bosses fågelrapportering</h1>
+            <p class="lead">Här rapporterar vi in alla arter vi ser!</p>
+        </header>
+        <main>
+            <h2 class="display-4">Populära fåglar <b>välj nu!</b></h2>
+            <p class="lead">Klicka på snyggaste fågeln!</p>
+            <section id="birds" class="row">
+                <div class="col-12 col-sm-6 col-lg-3" title="Klicka på knappen för att byta till bakgrundsbild">
+                    <img class="card-img-top" src="public/images/1.jpg" alt="föggel">
+                    <div class="card-body">
+                        <h5 class="card-title">Skata</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary btn-block birdbutton" data-birdid="1">Sätt som bakgrundsbild</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" title="Klicka på knappen för att byta till bakgrundsbild">
+                    <img class="card-img-top" src="public/images/2.jpg" alt="föggel">
+                    <div class="card-body">
+                        <h5 class="card-title">Kråka</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary btn-block birdbutton" data-birdid="2">Sätt som bakgrundsbild</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" title="Klicka på knappen för att byta till bakgrundsbild">
+                    <img class="card-img-top" src="public/images/8.jpg" alt="föggel">
+                    <div class="card-body">
+                        <h5 class="card-title">Gök</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary btn-block birdbutton" data-birdid="8">Sätt som bakgrundsbild</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" title="Klicka på knappen för att byta till bakgrundsbild">
+                    <img class="card-img-top" src="public/images/4.jpg" alt="föggel">
+                    <div class="card-body">
+                        <h5 class="card-title">Fasan</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary btn-block birdbutton" data-birdid="4">Sätt som bakgrundsbild</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" title="Klicka på knappen för att byta till bakgrundsbild">
+                    <img class="card-img-top" src="public/images/6.jpg" alt="föggel">
+                    <div class="card-body">
+                        <h5 class="card-title">Skogsmes</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary btn-block birdbutton" data-birdid="6">Sätt som bakgrundsbild</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" title="Klicka på knappen för att byta till bakgrundsbild">
+                    <img class="card-img-top" src="public/images/11.jpg" alt="föggel">
+                    <div class="card-body">
+                        <h5 class="card-title">Stadsmes</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary btn-block birdbutton" data-birdid="11">Sätt som bakgrundsbild</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" title="Klicka på knappen för att byta till bakgrundsbild">
+                    <img class="card-img-top" src="public/images/9.jpg" alt="föggel">
+                    <div class="card-body">
+                        <h5 class="card-title">Grässvan</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary btn-block birdbutton" data-birdid="9">Sätt som bakgrundsbild</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3" title="Klicka på knappen för att byta till bakgrundsbild">
+                    <img class="card-img-top" src="public/images/10.jpg" alt="föggel">
+                    <div class="card-body">
+                        <h5 class="card-title">Pekinganka</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary btn-block birdbutton" data-birdid="10">Sätt som bakgrundsbild</a>
+                    </div>
+                </div>
+              
+            </section>
+            <div class="row mt-5 d-none">
+                <div class="col-12 col-md-8 col-xl-10">
+                    <input type="text" id="msg" class="form-control">
+                </div>
+                <div class="col-12 col-med-4 col-xl-2">
+                    <a href="#" class="btn btn-danger">Skriv inlägg</a>
+                </div>
+            </div>
+            
+       
+
+        </main>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="public/scripts/client-script.js"></script>
+    </body>
+</html>
